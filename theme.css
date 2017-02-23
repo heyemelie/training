@@ -566,6 +566,7 @@ and (max-width: $screen-xs-max) {
 
 .course-card__instructor-name {
   font-size: 0.875em; //14px
+  text-transform: uppercase;
 }
 
 .course-card__price {
@@ -584,6 +585,7 @@ and (max-width: $screen-xs-max) {
 .course-card__title {
   color: $text-color;
   font-size: 1.125em; //18px
+  text-transform: uppercase;
 
   a {
     color: $text-color;
@@ -607,6 +609,7 @@ and (max-width: $screen-xs-max) {
   width: 100%;
   margin-bottom: 20px;
   padding: 0 20px;
+  text-transform: uppercase;
 
   .btn {
     padding: 8px;
@@ -775,6 +778,7 @@ header {
 .header-nav__item {
   font-size: 0.875em; //14px
   cursor: pointer;
+  text-transform: uppercase;
 }
 
 // Navbar: Dropdown
