@@ -14,7 +14,7 @@ input[type="reset"],input[type="submit"]{-webkit-appearance:button;cursor:pointe
 // Colours: Site
 // ---------------
 $primary-color: {{site.brand_colour}};
-$site-background-color: #ececec;
+$site-background-color: #fff;
 
 // Colours: Buttons
 // ---------------
@@ -80,9 +80,9 @@ $section-max-width: 1250px;
 @mixin card {
   @include clearfix;
   border-radius: 3px;
-  box-shadow: 1px 1px 0 #e2e2e2;
   position: relative;
   background: #ffffff;
+  border: 1px solid #000;
 }
 
 
@@ -594,8 +594,12 @@ and (max-width: $screen-xs-max) {
 
 .course-card__description {
   margin-bottom: 10px;
-  color: lighten($text-color,25%);
-  font-size: 0.938em; //15px
+  color: #333;
+  font-size: 0.8125em; //13px
+  font-weight: 300;
+  letter-spacing: 1.6px;
+  line-height: 1.5;
+  word-spacing: 5px;
 }
 
 
