@@ -780,9 +780,12 @@ header {
 }
 
 .header-nav__item {
-  font-size: 0.875em; //14px
+  font-size: 0.8125em; //14px
+  font-weight: 700;
   cursor: pointer;
   text-transform: uppercase;
+  line-height: 1.5;
+  letter-spacing: 2.8px;
 }
 
 // Navbar: Dropdown
@@ -1128,7 +1131,7 @@ and (min-width: $screen-xxl-min) {
 
 .site-landing__banner {
   position: relative;
-  height: 400px;
+  height: 450px;
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
@@ -1167,7 +1170,7 @@ and (min-width: $screen-xxl-min) {
 @media only screen
   and (max-width: $screen-sm-max) {
   .site-landing__banner {
-    height: 300px;
+    height: 400px;
   }
 
   .site-landing__banner--title {
@@ -1185,7 +1188,7 @@ and (min-width: $screen-xxl-min) {
 and (max-width: $screen-xs-max) {
 
   .site-landing__banner{
-    height: 250px;
+    height: 300px;
   }
 
   .site-landing__banner--title {
