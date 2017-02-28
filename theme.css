@@ -28,7 +28,7 @@ $header-text-color: {{site.header_text_colour}};
 
 // Colours: Footer
 // ---------------
-$footer-background-color: {{site.footer_background_colour}};
+$footer-background-color: #fff;
 
 // Colours: Neutral
 // ---------------
@@ -197,7 +197,7 @@ small {
 }
 
 a {
-  color: $link-color;
+  color: #000;
 
   &:hover {
     color: darken($link-color, 12%);
@@ -495,6 +495,28 @@ and (max-width: $screen-xs-max) {
   display: inline-block !important;
 }
 
+// About Section on Landing Page
+// ---------------
+
+.about {
+    border-top: 1px solid #000;
+}
+
+.about_content h1 {
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.about_content p {
+    
+}
+
+.footnote {
+    font-style: italic;
+    font-size: 0.75em;
+}
+
+
 //==============================================================================
 // 5. Course Cards
 //==============================================================================
@@ -594,7 +616,7 @@ and (max-width: $screen-xs-max) {
 
 .course-card__description {
   margin-bottom: 10px;
-  color: #333;
+  color: #000;
   font-size: 0.8125em; //13px
   font-weight: 300;
   letter-spacing: 1.6px;
@@ -960,23 +982,23 @@ footer, #wrap:after {
 }
 
 footer {
-  margin-left: auto;
-  margin-right: auto;
-  max-width: $screen-xxl-min;
-  background: $footer-background-color;
-  padding: 30px 0;
-  color: dynamic-text($footer-background-color);
-
-
-  a {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: $screen-xxl-min;
+    background: $footer-background-color;
+    padding: 30px 0;
     color: dynamic-text($footer-background-color);
+    border-top: 1px solid #000;
 
-    &:hover,
-    &:active,
-    &:focus {
-      text-decoration: underline;
+    a {
+        color: #000;
+
+        &:hover,
+        &:active,
+        &:focus {
+        text-decoration: none;
+        }
     }
-  }
 }
 
 .footer-nav {
@@ -988,7 +1010,9 @@ footer {
 
 .footer-nav__item {
   display: inline-block;
-  font-size: 0.875em; //14px
+  font-size: 0.8125em; //13px
+  font-weight: 700;
+  letter-spacing: 2.8px;
 }
 
 .footer-nav__item + .footer-nav__item {
