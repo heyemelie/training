@@ -1,58 +1,57 @@
 {% comment %}
-  This is the footer of your site and appears on all pages covered by the theme.
+    This is the footer of your site and appears on all pages covered by the theme.
 {% endcomment %}
-<footer class="footer hidden-print" id="global-footer">
-  <div class="column">
-    <div class="row">
-      <div class="col-sm-12">
-        <ul class="footer-nav">
-          <li class="footer-nav__item">
-            <a href="{{ site.home_url }}">
-              {{ 'liquid.partials.footer.link_home' | translate }}
-            </a>
-          </li>
-          <li class="footer-nav__item">
-            <a data-uv-trigger="true" href="mailto:{{ site.support_email }}">
-              {{ 'liquid.partials.footer.link_support' | translate }}
-            </a>
-          </li>
-          {% if site.has_terms %}
-            <li class="footer-nav__item">
-              <a href="{{ site.terms_url }}">
-                {{ 'liquid.partials.footer.link_terms' | translate }}
-              </a>
-            </li>
-          {% endif %}
-          {% if site.has_privacy_policy %}
-            <li class="footer-nav__item">
-              <a href="{{ site.privacy_policy_url }}">
-                {{ 'liquid.partials.footer.link_privacy_policy' | translate }}
-              </a>
-            </li>
-          {% endif %}
-        </ul>
-      </div>
-    </div>
-  </div>
 
-  <div class="column">
-    <div class="row">
-      <div class="col-sm-12 text-center">
-        <div class="footer-copyright">
-          {{ site.copyright }}
+<footer class="footer hidden-print" id="global-footer">
+    <div class="column">
+        <div class="row">
+            <div class="col-sm-12">
+                <ul class="footer-nav">
+                    <li class="footer-nav__item"><a href="https://www.volumental.com/">Volumental</a></li>
+                    <li class="footer-nav__item"><a href="https://www.facebook.com/Volumental/">Facebook</a></li>
+                    <li class="footer-nav__item"><a href="https://twitter.com/volumental">Twitter</a></li>
+                    <li class="footer-nav__item"><a href="https://www.linkedin.com/company/volumental">LinkedIn</a></li>
+                    <li class="footer-nav__item">
+                        <a data-uv-trigger="true" href="mailto:{{ site.support_email }}">
+                            {{ 'liquid.partials.footer.link_support' | translate }}
+                        </a>
+                    </li>
+                    {% if site.has_terms %}
+                    <li class="footer-nav__item">
+                        <a href="{{ site.terms_url }}">
+                            {{ 'liquid.partials.footer.link_terms' | translate }}
+                        </a>
+                    </li>
+                    {% endif %}
+                    {% if site.has_privacy_policy %}
+                    <li class="footer-nav__item">
+                        <a href="{{ site.privacy_policy_url }}">
+                            {{ 'liquid.partials.footer.link_privacy_policy' | translate }}
+                        </a>
+                    </li>
+                    {% endif %}
+                </ul>
+            </div>
         </div>
-        {% comment %}
-        Begin white-labelling logic
-        {% endcomment %}
-        {% unless site.white_labelling_activated %}
-          <br>
-          <a href="http://www.thinkific.com/?utm_source={{ site.subdomain }}&utm_medium=powered-by&utm_campaign=Referral"
-             target="_blank" class="footer-powered-by">
-            Powered By Thinkific
-          </a>
-        {% endunless %}
-      </div>
     </div>
-  </div>
+
+    <div class="column">
+        <div class="row">
+            <div class="col-sm-12 text-center">
+                <div class="footer-copyright">
+                    {{ site.copyright }}
+                </div>
+                {% comment %}
+                Begin white-labelling logic
+                {% endcomment %}
+                {% unless site.white_labelling_activated %}
+                <br>
+                <a href="http://www.thinkific.com/?utm_source={{ site.subdomain }}&utm_medium=powered-by&utm_campaign=Referral" target="_blank" class="footer-powered-by">
+                    Powered By Thinkific
+                </a>
+                {% endunless %}
+            </div>
+        </div>
+    </div>
 
 </footer>
