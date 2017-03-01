@@ -42,6 +42,20 @@
     </section>
   {% endif %}
 
+  {% comment %} Display the course curriculum {% endcomment %}
+  <section class="course-curriculum" data-preview-item="course-curriculum">
+    <div class="column">
+      <div class="row">
+        <div class="col-md-10 col-md-offset-1">
+          <h2 class="section-title">
+            {{ 'liquid.views.course_landing_page.header_course_curriculum' | translate }}
+          </h2>
+          {% include "course_landing_page_curriculum" %}
+        </div>
+      </div>
+    </div>
+  </section>
+  
   {% comment %} Display the course instructor {% endcomment %}
   <section class='course-instructor' data-preview-item="course-instructor">
     <div class='column'>
@@ -73,20 +87,6 @@
     </div>
   </section>
 
-  {% comment %} Display the course curriculum {% endcomment %}
-  <section class="course-curriculum" data-preview-item="course-curriculum">
-    <div class="column">
-      <div class="row">
-        <div class="col-md-10 col-md-offset-1">
-          <h2 class="section-title">
-            {{ 'liquid.views.course_landing_page.header_course_curriculum' | translate }}
-          </h2>
-          {% include "course_landing_page_curriculum" %}
-        </div>
-      </div>
-    </div>
-  </section>
-
   {% comment %} Display course reviews if the course has any {% endcomment %}
   {% if page.reviews_enabled and page.approved_reviews_count > 0 %}
     <section class="course-review" data-preview-item="course-reviews">
@@ -99,19 +99,6 @@
       </div>
     </section>
   {% endif %}
-
-  {% comment %} Display CTA buttons {% endcomment %}
-  <section class='product-body-button-block' data-preview-item="body-button-block">
-    <div class='product-main-cta'>
-      <div class='column'>
-        <div class='row'>
-          <div class='col-sm-12'>
-            {% include "course_landing_page_action_buttons" %}
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
 
   {% comment %} Display any related products (upsells) {% endcomment %}
   {% if page.has_related_products %}
