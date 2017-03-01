@@ -134,11 +134,8 @@ html, body {
   background: $site-background-color;
   color: $text-color;
   font-family: "Lato", sans-serif;
-  text-rendering: optimizeLegibility;
   font-size: 1em; //16px
   line-height: 1;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
   height: 100%;
 }
 
@@ -508,7 +505,12 @@ and (max-width: $screen-xs-max) {
 }
 
 .about_content p {
-    
+    font-size: 0.8125em;
+    font-weight: 300;
+    letter-spacing: 1.6px;
+    line-height: 1.5;
+    word-spacing: 5px;
+    color: #000;
 }
 
 .footnote {
