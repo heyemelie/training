@@ -1,116 +1,122 @@
 {% comment %}
   This is the built-in high converting course landing page.
 {% endcomment %}
-<div class='product-landing bauer high-convert-landing' data-preview-container="true">
 
-  {% comment %} The big image banner and CTA buttons at the top of the page {% endcomment %}
-  <section class='product-banner page-banner' data-preview-item="page-banner">
-    {% include "course_landing_page_header_titles" %}
-    <div class='product-main-cta'>
-      {% if page.has_course_intro_video %}
+<div class="bauer">
+    <div class='product-landing high-convert-landing' data-preview-container="true">
+    
+      {% comment %} The big image banner and CTA buttons at the top of the page {% endcomment %}
+      <section class='product-banner page-banner' data-preview-item="page-banner">
+        <div class="logo">
+            <img src="{{ 'bauer-logo.png' | theme_asset_url }}">
+        </div>
+        {% include "course_landing_page_header_titles" %}
+        <div class='product-main-cta'>
+          {% if page.has_course_intro_video %}
+            <div class='column'>
+              <div class='row'>
+                <div class='col-sm-12'>
+                  {% include 'course_intro_video' %}
+                </div>
+              </div>
+            </div>
+          {% endif %}
+          {% include "course_landing_page_action_buttons" %}
+        </div>
+      </section>
+    
+      {% comment %} If a users enters a coupon URL ( yoursite.com?coupon=100) they
+      will see a small section that displays details about the coupon. {% endcomment %}
+      {% if page.coupon_code_provided and page.coupon_supported %}
+        {% include "course_landing_page_coupon_block" %}
+      {% endif %}
+    
+      {% comment %} Display the course description {% endcomment %}
+      {% if page.course_has_description %}
+        <section class="product-overview" data-preview-item="course-description">
+          <div class="column">
+            <div class="row">
+              <div class="col-md-10 col-md-offset-1">
+                <!--<h2 class="section-title">
+                  {{ 'liquid.views.course_landing_page.header_course_description' | translate }}
+                </h2>-->
+                {{ page.course_description }}
+              </div>
+            </div>
+          </div>
+        </section>
+      {% endif %}
+    
+      {% comment %} Display the course curriculum {% endcomment %}
+      <section class="course-curriculum" data-preview-item="course-curriculum">
+        <div class="column">
+          <div class="row">
+            <div class="col-md-10 col-md-offset-1">
+              <h2 class="section-title">
+                Course Chapters
+              </h2>
+              {% include "course_landing_page_curriculum" %}
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      {% comment %} Display the course instructor {% endcomment %}
+      <section class='course-instructor' data-preview-item="course-instructor">
         <div class='column'>
           <div class='row'>
-            <div class='col-sm-12'>
-              {% include 'course_intro_video' %}
+            <div class='col-md-10 col-md-offset-1'>
+              <div class='instructor__img-wrap'>
+                <img alt="{{ page.course_instructor_full_name}}"
+                     class="instructor__img"
+                     src="{{ page.course_instructor_avatar_url }}">
+              </div>
+              <div class='instructor__details'>
+                <div class='instructor__name'>
+                  {{ page.course_instructor_full_name }}
+                </div>
+                <div class='instructor__title'>
+                  {{ page.course_instructor_title }}
+                </div>
+              </div>
+              <div class='instructor__bio'>
+                {{ page.course_instructor_bio }}
+                {% if page.has_course_contact_information %}
+                  <div class="course-contact-info">
+                   {{ page.course_contact_information }}
+                  </div>
+                {% endif %}
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    
+      {% comment %} Display course reviews if the course has any {% endcomment %}
+      {% if page.reviews_enabled and page.approved_reviews_count > 0 %}
+        <section class="course-review" data-preview-item="course-reviews">
+          <div class="column">
+            <div class="row">
+              <div class="col-md-10 col-md-offset-1">
+                {% include "course_review" course:page.course %}
+              </div>
+            </div>
+          </div>
+        </section>
+      {% endif %}
+    
+      {% comment %} Display any related products (upsells) {% endcomment %}
+      {% if page.has_related_products %}
+        <section class="related-products" data-preview-item="course-related-products">
+          <div class='column'>
+            <div class='row'>
+              <div class='col-sm-10 col-sm-offset-1'>
+                {% include "landing_page_upsells" %}
+              </div>
             </div>
           </div>
         </div>
       {% endif %}
-      {% include "course_landing_page_action_buttons" %}
     </div>
-  </section>
-
-  {% comment %} If a users enters a coupon URL ( yoursite.com?coupon=100) they
-  will see a small section that displays details about the coupon. {% endcomment %}
-  {% if page.coupon_code_provided and page.coupon_supported %}
-    {% include "course_landing_page_coupon_block" %}
-  {% endif %}
-
-  {% comment %} Display the course description {% endcomment %}
-  {% if page.course_has_description %}
-    <section class="product-overview" data-preview-item="course-description">
-      <div class="column">
-        <div class="row">
-          <div class="col-md-10 col-md-offset-1">
-            <!--<h2 class="section-title">
-              {{ 'liquid.views.course_landing_page.header_course_description' | translate }}
-            </h2>-->
-            {{ page.course_description }}
-          </div>
-        </div>
-      </div>
-    </section>
-  {% endif %}
-
-  {% comment %} Display the course curriculum {% endcomment %}
-  <section class="course-curriculum" data-preview-item="course-curriculum">
-    <div class="column">
-      <div class="row">
-        <div class="col-md-10 col-md-offset-1">
-          <h2 class="section-title">
-            Course Chapters
-          </h2>
-          {% include "course_landing_page_curriculum" %}
-        </div>
-      </div>
-    </div>
-  </section>
-  
-  {% comment %} Display the course instructor {% endcomment %}
-  <section class='course-instructor' data-preview-item="course-instructor">
-    <div class='column'>
-      <div class='row'>
-        <div class='col-md-10 col-md-offset-1'>
-          <div class='instructor__img-wrap'>
-            <img alt="{{ page.course_instructor_full_name}}"
-                 class="instructor__img"
-                 src="{{ page.course_instructor_avatar_url }}">
-          </div>
-          <div class='instructor__details'>
-            <div class='instructor__name'>
-              {{ page.course_instructor_full_name }}
-            </div>
-            <div class='instructor__title'>
-              {{ page.course_instructor_title }}
-            </div>
-          </div>
-          <div class='instructor__bio'>
-            {{ page.course_instructor_bio }}
-            {% if page.has_course_contact_information %}
-              <div class="course-contact-info">
-               {{ page.course_contact_information }}
-              </div>
-            {% endif %}
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  {% comment %} Display course reviews if the course has any {% endcomment %}
-  {% if page.reviews_enabled and page.approved_reviews_count > 0 %}
-    <section class="course-review" data-preview-item="course-reviews">
-      <div class="column">
-        <div class="row">
-          <div class="col-md-10 col-md-offset-1">
-            {% include "course_review" course:page.course %}
-          </div>
-        </div>
-      </div>
-    </section>
-  {% endif %}
-
-  {% comment %} Display any related products (upsells) {% endcomment %}
-  {% if page.has_related_products %}
-    <section class="related-products" data-preview-item="course-related-products">
-      <div class='column'>
-        <div class='row'>
-          <div class='col-sm-10 col-sm-offset-1'>
-            {% include "landing_page_upsells" %}
-          </div>
-        </div>
-      </div>
-    </div>
-  {% endif %}
   
 </div>
