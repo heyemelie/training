@@ -140,7 +140,7 @@ html, body {
 }
 
 body .bauer {
-    font-family: "Neo Sans W02";
+    font-family: "Neo Sans W02", Helvetica, sans-serif;
 }
 
 // =============================================================================
@@ -1319,6 +1319,17 @@ and (max-width: $screen-xs-max) {
   }
 }
 
+// Bauer Page Banner
+// ------------
+
+.bauer .product-banner .product__title {
+    margin: 0 0 30px;
+    color: #fff;
+    font-weight: 700;
+    font-size: 3.125em; //50px
+    text-transform: uppercase;
+}
+
 // Pops open the venobox window
 // ------------
 
@@ -1367,7 +1378,7 @@ and (max-width: $screen-xs-max) {
 
 .bauer .product-main-cta .btn {
     background-color: #009cda;
-    color: #000;
+    color: #fff;
     font-weight: 700;
     text-transform: uppercase;
 }
@@ -1608,6 +1619,17 @@ and (max-width: $screen-xs-max) {
   }
 }
 
+// Bauer Instructor Section
+// --------------
+.bauer .high-convert-landing .course-instructor .instructor__img-wrap {
+    margin-top: -190px;
+  }
+  
+.bauer  .high-convert-landing .course-instructor {
+  background: #fff;
+  color: #000;
+}
+
 // High Conversion landing: Course Curriculum
 // --------------
 
@@ -1620,7 +1642,7 @@ and (max-width: $screen-xs-max) {
 
   // Styles chapter block in the curriculum list
   .curriculum-chapter {
-    margin: 0 0 10px 0 !important;
+    margin: 0 0 10px 0;
   }
 
   // Container for the chapter header
@@ -1684,6 +1706,10 @@ and (max-width: $screen-xs-max) {
     background-color: #000;
 }
 
+.bauer .course-curriculum .curriculum-chapter {
+    margin: 0;
+  }
+
 .bauer .high-convert-landing .course-curriculum .curriculum-chapter-header {
     background-color: #000;
     color: #fff;
@@ -1691,10 +1717,12 @@ and (max-width: $screen-xs-max) {
 
 .bauer .high-convert-landing .course-curriculum .chapter-header {
     color: #fff;
+    font-weight: 400;
 }
 
 .bauer .high-convert-landing .course-curriculum .section-title {
     color: #fff;
+    font-size: 3.125em;
   }
 
 // High Conversion landing: Media Queries
