@@ -1263,8 +1263,9 @@ and (max-width: $screen-xs-max) {
   .section-title {
     margin: 0 0 42px;
     color: $primary-color;
-    font-weight: 200;
+    font-weight: 700;
     font-size: 2.250em; //36px
+    text-transform: uppercase;
   }
 }
 
@@ -1362,6 +1363,13 @@ and (max-width: $screen-xs-max) {
   .bundle-cta-tagline {
     color: $text-color;
   }
+}
+
+.bauer .product-main-cta .btn {
+    background-color: #009cda;
+    color: #000;
+    font-weight: 700;
+    text-transform: uppercase;
 }
 
 // Product Landing: Product Overview
@@ -1618,7 +1626,7 @@ and (max-width: $screen-xs-max) {
   // Container for the chapter header
   .curriculum-chapter-header {
     padding: 10px 15px !important;
-    background: $primary-color !important;
+    background: $primary-color;
 
     .chapter-time {
       color: $text-color-light;
@@ -1658,13 +1666,36 @@ and (max-width: $screen-xs-max) {
   .chapter-toggle {
     border-radius: 0;
     border: 0;
-    background: #ffffff;
   }
 
   .course-main-cta {
     padding-top: 36px;
   }
 }
+
+// Bauer Curriculum
+// ---------------
+
+.bauer .course-curriculum {
+      background-color: #000;
+  }
+  
+.bauer .chapter-toggle {
+    background-color: #000;
+}
+
+.bauer .high-convert-landing .course-curriculum .curriculum-chapter-header {
+    background-color: #000;
+    color: #fff;
+}
+
+.bauer .high-convert-landing .course-curriculum .chapter-header {
+    color: #fff;
+}
+
+.bauer .high-convert-landing .course-curriculum .section-title {
+    color: #fff;
+  }
 
 // High Conversion landing: Media Queries
 // ---------------
