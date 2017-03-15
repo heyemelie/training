@@ -139,6 +139,10 @@ html, body {
   height: 100%;
 }
 
+body .bauer {
+    font-family: "Neo Sans W02";
+}
+
 // =============================================================================
 // 1. Type Converted to EM using http://pxtoem.com/
 // =============================================================================
@@ -1291,8 +1295,9 @@ and (max-width: $screen-xs-max) {
   .product__title {
     margin: 0 0 30px;
     color: dynamic-text($primary-color);
-    font-weight: 300;
+    font-weight: 400;
     font-size: 2.438em; //39px
+    text-transform: uppercase;
   }
 
   .product__subtitle {
