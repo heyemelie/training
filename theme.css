@@ -1638,12 +1638,16 @@ and (max-width: $screen-xs-max) {
 // Bauer Instructor Section
 // --------------
 .bauer .high-convert-landing .course-instructor .instructor__img-wrap {
-    margin-top: -190px;
+    margin-top: -50px;
   }
   
 .bauer  .high-convert-landing .course-instructor {
   background: #fff;
   color: #000;
+}
+
+.bauer .instructor__title-section {
+    text-align: center;
 }
 
 // High Conversion landing: Course Curriculum
