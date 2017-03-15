@@ -1,7 +1,7 @@
 {% comment %}
   This is the built-in high converting course landing page.
 {% endcomment %}
-<div class='product-landing high-convert-landing' data-preview-container="true">
+<div class='product-landing bauer high-convert-landing' data-preview-container="true">
 
   {% comment %} The big image banner and CTA buttons at the top of the page {% endcomment %}
   <section class='product-banner page-banner' data-preview-item="page-banner">
@@ -32,9 +32,9 @@
       <div class="column">
         <div class="row">
           <div class="col-md-10 col-md-offset-1">
-            <h2 class="section-title">
+            <!--<h2 class="section-title">
               {{ 'liquid.views.course_landing_page.header_course_description' | translate }}
-            </h2>
+            </h2>-->
             {{ page.course_description }}
           </div>
         </div>
@@ -48,7 +48,7 @@
       <div class="row">
         <div class="col-md-10 col-md-offset-1">
           <h2 class="section-title">
-            {{ 'liquid.views.course_landing_page.header_course_curriculum' | translate }}
+            Course Chapters
           </h2>
           {% include "course_landing_page_curriculum" %}
         </div>
@@ -112,4 +112,5 @@
       </div>
     </div>
   {% endif %}
+  
 </div>
