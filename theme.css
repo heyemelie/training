@@ -1330,6 +1330,15 @@ and (max-width: $screen-xs-max) {
     text-transform: uppercase;
 }
 
+.bauer .product-banner {
+  background-position: bottom;
+}
+
+.bauer .logo {
+    width: 15%;
+    margin: 0 auto;
+}
+
 // Pops open the venobox window
 // ------------
 
@@ -1381,7 +1390,14 @@ and (max-width: $screen-xs-max) {
     color: #fff;
     font-weight: 700;
     text-transform: uppercase;
+    transition: background-color 0.5s ease;
 }
+
+.bauer .product-main-cta .btn:hover {
+    background-color: #00658e;
+}
+
+
 
 // Product Landing: Product Overview
 // ------------
