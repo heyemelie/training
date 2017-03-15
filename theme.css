@@ -980,11 +980,6 @@ and (max-width: $screen-md-max) {
 // 7. Footer
 //==============================================================================
 
-// https://css-tricks.com/snippets/css/sticky-footer/
-footer, #wrap:after {
-  height: 166px;
-}
-
 footer {
     margin-left: auto;
     margin-right: auto;
