@@ -1345,6 +1345,11 @@ and (max-width: $screen-xs-max) {
     letter-spacing: -0.04em;
 }
 
+.newbalance .logo {
+    text-align: center;
+    margin: 1em;
+}
+
 @media only screen
 and (max-width: $screen-sm-max) {
     
@@ -1647,8 +1652,8 @@ and (max-width: $screen-xs-max) {
   .instructor__img {
     border-radius: 50%;
     margin-bottom: 10px;
-    height: 162px;
-    width: 162px;
+    height: 130px;
+    width: 130px;
     border: 5px solid #ffffff;
   }
 
@@ -1694,7 +1699,6 @@ and (max-width: $screen-xs-max) {
   }
 
   .chapter-header {
-    font-weight: bold;
     color: dynamic-text($primary-color);
   }
 
@@ -1741,7 +1745,6 @@ and (max-width: $screen-xs-max) {
 
 .bauer .high-convert-landing .course-curriculum .chapter-header {
     color: #fff;
-    font-weight: 400;
 }
 
 .bauer .high-convert-landing .course-curriculum .section-title {
@@ -1754,7 +1757,21 @@ and (max-width: $screen-xs-max) {
 // New Balance Curriculum
 // ---------------
 
+.newbalance .course-curriculum {
+    background-color: #e5e5e5;
+}
 
+.newbalance .high-convert-landing .course-curriculum .chapter-header {
+    color: #000;
+}
+
+.newbalance .high-convert-landing .course-curriculum .section-title {
+    color: #000;
+    font-size: 2.3125em;
+    font-weight: 700;
+    line-height: 0.9em;
+    letter-spacing: -0.04em;
+}
 
 // High Conversion landing: Media Queries
 // ---------------
