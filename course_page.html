@@ -32,9 +32,6 @@
       <div class="column">
         <div class="row">
           <div class="col-md-10 col-md-offset-1">
-            <h2 class="section-title">
-              {{ 'liquid.views.course_landing_page.header_course_description' | translate }}
-            </h2>
             {{ page.course_description }}
           </div>
         </div>
@@ -48,7 +45,7 @@
       <div class="row">
         <div class="col-md-10 col-md-offset-1">
           <h2 class="section-title">
-            {{ 'liquid.views.course_landing_page.header_course_curriculum' | translate }}
+            Course Chapters
           </h2>
           {% include "course_landing_page_curriculum" %}
         </div>
@@ -67,6 +64,9 @@
                  src="{{ page.course_instructor_avatar_url }}">
           </div>
           <div class='instructor__details'>
+                <div class="instructor__title-section">
+                    This course is led by:
+                </div>
             <div class='instructor__name'>
               {{ page.course_instructor_full_name }}
             </div>
