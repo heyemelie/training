@@ -144,7 +144,7 @@ body .bauer {
 }
 
 body .newbalance {
-    font-family: "ITC Avant Garde Gothic W04", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;;
+    font-family: "ITC Avant Garde Gothic W04", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
 }
 
 // =============================================================================
@@ -1294,7 +1294,7 @@ and (max-width: $screen-xs-max) {
 
   .product__title {
     margin: 0 0 30px;
-    color: dynamic-text($primary-color);
+    color: #fff;
     font-weight: 400;
     font-size: 2.438em; //39px
     text-transform: uppercase;
@@ -1322,11 +1322,8 @@ and (max-width: $screen-xs-max) {
 // ------------
 
 .bauer .product-banner .product__title {
-    margin: 0 0 30px;
-    color: #fff;
     font-weight: 700;
     font-size: 3.125em; //50px
-    text-transform: uppercase;
 }
 
 .bauer .product-banner {
@@ -1338,11 +1335,25 @@ and (max-width: $screen-xs-max) {
     margin: 0 auto;
 }
 
+// New Balance Page Banner
+// ------------
+
+.newbalance .product-banner .product__title {
+    font-weight: 700;
+    font-size: 2.3125em; //37px
+    line-height: .9em;
+    letter-spacing: -0.04em;
+}
+
 @media only screen
 and (max-width: $screen-sm-max) {
     
     .bauer .logo {
-       max-width: 8em; 
+       max-width: 8em;
+    }
+    
+    .newbalance .product-banner .product__title {
+        font-size: 2em; //32px
     }
 }
 
@@ -1383,6 +1394,7 @@ and (max-width: $screen-xs-max) {
     padding: 15px 40px;
     font-weight: 400;
     font-size: 1.250em; //20px
+    text-transform: uppercase;
   }
 }
 
@@ -1392,11 +1404,13 @@ and (max-width: $screen-xs-max) {
   }
 }
 
+// Bauer main CTA
+// ------------
+
 .bauer .product-main-cta .btn {
     background-color: #009cda;
     color: #fff;
     font-weight: 700;
-    text-transform: uppercase;
     transition: background-color 0.5s ease;
 }
 
@@ -1404,6 +1418,17 @@ and (max-width: $screen-xs-max) {
     background-color: #00658e;
 }
 
+// New Balance main CTA
+// ------------
+
+.newbalance .product-main-cta .btn {
+    background-color: #e21836;
+    color: #fff;
+    font-family: "ITC Avant Garde Gothic W01", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+    font-weight: 500;
+    font-size: 0.875em; //14px
+    letter-spacing: .75px;
+}
 
 
 // Product Landing: Product Overview
@@ -1725,6 +1750,11 @@ and (max-width: $screen-xs-max) {
     font-weight: 700;
     letter-spacing: normal;
   }
+  
+// New Balance Curriculum
+// ---------------
+
+
 
 // High Conversion landing: Media Queries
 // ---------------
