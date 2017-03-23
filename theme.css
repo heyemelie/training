@@ -1654,6 +1654,8 @@ and (max-width: $screen-xs-max) {
 
   .section-title {
     color: $text-color;
+    font-weight: 400;
+    letter-spacing: 5px;
   }
 
   // Container for the chapter header
@@ -1720,6 +1722,8 @@ and (max-width: $screen-xs-max) {
 .bauer .high-convert-landing .course-curriculum .section-title {
     color: #fff;
     font-size: 3.125em;
+    font-weight: 700;
+    letter-spacing: normal;
   }
 
 // High Conversion landing: Media Queries
