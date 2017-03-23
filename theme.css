@@ -143,6 +143,10 @@ body .bauer {
     font-family: "Neo Sans W02", Helvetica, sans-serif;
 }
 
+body .newbalance {
+    font-family: "ITC Avant Garde Gothic W04", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;;
+}
+
 // =============================================================================
 // 1. Type Converted to EM using http://pxtoem.com/
 // =============================================================================
@@ -783,7 +787,7 @@ header {
 
 .header-logo__image {
   width: auto;
-  max-height: 35px;
+  max-height: 40px;
   max-width: initial;
   margin-right: 20px;
 }
@@ -1330,8 +1334,16 @@ and (max-width: $screen-xs-max) {
 }
 
 .bauer .logo {
-    width: 15%;
+    max-width: 14em;
     margin: 0 auto;
+}
+
+@media only screen
+and (max-width: $screen-sm-max) {
+    
+    .bauer .logo {
+       max-width: 8em; 
+    }
 }
 
 // Pops open the venobox window
@@ -1592,8 +1604,8 @@ and (max-width: $screen-xs-max) {
 
 .high-convert-landing .course-instructor {
   margin-top: 48px;
-  background: $color-neutral-light-2;
-  color: $text-color;
+  background: #fff;
+  color: #000;
 
   // This controls the width of the images people put in the redactor box
   // on the curriculum landing page
@@ -1603,7 +1615,7 @@ and (max-width: $screen-xs-max) {
   }
 
   .instructor__img-wrap {
-    margin-top: -120px;
+    margin-top: -50px;
     text-align: center;
   }
 
@@ -1618,6 +1630,10 @@ and (max-width: $screen-xs-max) {
   .instructor__details {
     margin-bottom: 36px;
   }
+  
+  .instructor__title-section {
+      text-align: center;
+  }
 
   .instructor__name {
     font-size: 1.250em; //20px
@@ -1630,21 +1646,6 @@ and (max-width: $screen-xs-max) {
   }
 }
 
-// Bauer Instructor Section
-// --------------
-.bauer .high-convert-landing .course-instructor .instructor__img-wrap {
-    margin-top: -50px;
-  }
-  
-.bauer  .high-convert-landing .course-instructor {
-  background: #fff;
-  color: #000;
-}
-
-.bauer .instructor__title-section {
-    text-align: center;
-}
-
 // High Conversion landing: Course Curriculum
 // --------------
 
@@ -1655,15 +1656,9 @@ and (max-width: $screen-xs-max) {
     color: $text-color;
   }
 
-  // Styles chapter block in the curriculum list
-  .curriculum-chapter {
-    margin: 0 0 10px 0;
-  }
-
   // Container for the chapter header
   .curriculum-chapter-header {
     padding: 10px 15px !important;
-    background: $primary-color;
 
     .chapter-time {
       color: $text-color-light;
@@ -1716,19 +1711,6 @@ and (max-width: $screen-xs-max) {
 .bauer .course-curriculum {
       background-color: #000;
   }
-  
-.bauer .chapter-toggle {
-    background-color: #000;
-}
-
-.bauer .course-curriculum .curriculum-chapter {
-    margin: 0;
-  }
-
-.bauer .high-convert-landing .course-curriculum .curriculum-chapter-header {
-    background-color: #000;
-    color: #fff;
-}
 
 .bauer .high-convert-landing .course-curriculum .chapter-header {
     color: #fff;
