@@ -28,34 +28,6 @@
           {{ chapter.description }}
         </div>
       </div>
-      <!--<div class='row in' id='collapse{{ index + 1 }}'>
-        <div class='col-sm-12'>
-          <div class='chapter-list'>
-            {% for content in chapter.contents %}
-              <a href="{{ content.take_course_url }}" class="chapter-list-item__link">
-                <div class='chapter-list-item'>                
-                  <span class='chapter-list-item__title'>
-                    {{ content.name }}
-                    {% if content.free %}
-                      <span class='label label-free'>
-                        {{ 'liquid.partials.course_landing_page_curriculum.label_free' | translate }}
-                      </span>
-                    {% endif %}
-                  </span>
-                  <i class='{{ content.icon_css_class }}'></i>                               
-                </div>
-              </a> 
-            {% endfor %}
-          </div>
-        </div>
-      </div>
-      <div class='row'>
-        <div class='col-sm-12'>
-          <div class='toggle-content' data-toggle='collapse' data-target='#collapse{{ index + 1 }}'>
-            {{ 'liquid.partials.course_landing_page_curriculum.text_hide_content' | translate }}
-          </div>
-        </div>
-      </div>-->
     </div>
   </div>
 {% endfor %}
